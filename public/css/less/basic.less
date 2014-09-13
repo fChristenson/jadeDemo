@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: @blue;
+}
+.clear {
+    clear: both;
+}
+addr > a {
+    margin: 0 1em 0 0;
+}
+body {
+    background: @green;
+}
+h1,h2,h3,addr{
+    font-family: serif;
+    color: @white;
+    text-align: center;
+}
+h1,h2,h3{
+    text-shadow: 1px 1px @black;
+}
+.black-bg {
+    background: @black;
+    padding: 3em;
+}
+.jumbo {
+    font-size: 400%;
+}
+.changeColor {
+    -webkit-animation: change 5s linear;
+}
+
+@-webkit-keyframes change {
+    from {color: @white}
+    to {color: @black}
+}
