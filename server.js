@@ -11,6 +11,15 @@ app.get('/', function (req, res) {
     res.render('index.jade');
 });
 
+var message = 'Page not found 404';
+
+app.use(function (req, res) {
+    res.status(404);
+    res.header('Content-Type', 'text/plain');
+    res.send(message);
+    res.end();
+});
+
 var server = http.createServer(app);
 server.listen(3000, function () {
     console.log('Listening on port 3000');
